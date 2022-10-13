@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejemplo">1er div</div>
+    <div class="ejemplo">2edo div</div>
+    <div class="ejemplo">3er div</div>
+    
+    <button onclick="cambiarTexto()">Cambiar un parrafo </button> <!-- cuando el usuario
+    haga click en ese boton se dispara la funcion cambiarTexto()-->
+
+<button onclick="cambiarTodos()">Cambiar todos los textos</button>
+<form action="">
+    Apellido:<input name="fnombrecompleto" type="text" value="Perez"><br>
+    Nombre:<input name="fnombrecompleto" type="text" value="Juan">
+</form>
+<button onclick="obtenerTag()">tagName</button>
+<button onclick="obtenerValor()">value</button>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<input name="seleccion" type="number" min="0" max="2"><br>
+<button onclick="obtenerElemento()">Obtener elemento</button>
+ <p id="demo"></p><!--Aca se va a ejecutar la funcion obtenerTag()o obtenerValor()-->
+   
+   <script>
+        
+       function obtenerElemento(){
+        let elems= document.getElementsByTagName("li")//nos trae todos los objetos que coincidan con el nombre "li"
+        let sel=document.getElementsByName("seleccion")[0].value //seleccion del usuario, es el valor que tenga el input "seleccio"
+
+        document.getElementById("demo").innerHTML=elems[sel].innerHTML// nos va a mostrar en el demo la posicion del li en la seleccion elems[sel]
+       }
+            function obtenerTag(){
+            let tag=document.getElementsByName("fnombrecompleto")[0].tagName
+            document.getElementById("demo").innerHTML=tag
+            }// con tagName obtenenmos ue tipo de elemento es en este caso el aapellido
+         
+            function obtenerValor() {
+                let valor = document.getElementsByName("fnombrecompleto")[1].value
+                document.getElementById("demo").innerHTML = valor
+            }//obtenemos el valor en este caso del nombre 
+         
+            function cambiarTexto() {
+          let elems = document.getElementsByClassName("ejemplo")
+           elems[0].innerHTML="HolaMundo!"
+            }
+
+          
+            function cambiarTodos() {
+        let elems = document.getElementsByClassName("ejemplo")
+        for(let i=0; i<elems.length; i++)
+        elems[i].innerHTML = `HolaMundo ${i+1}`
+            }
+               
+
+</script>
+</body>
+</html>

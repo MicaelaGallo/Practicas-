@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="enviarMsj()">Hacer click</button>
+
+    <script>
+      
+     let btn=document.querySelector("button")// del documento traemos todos los botones
+     btn.onclick=()=> alert("Holaaa!")//todos los botones cuando hacemos click se activa la funcion 
+      //const enviarMsj= ()=>alert("hola!")//cuando hacemos click en el boton nos envia una alert la pagina web
+    
+    
+    </script>
+
+<h2 onclick="cambiarTexto(this)">Hacer click</h2><!--con el this pasos el h2 como parametro--> 
+
+<script>
+    function cambiarTexto(elem){//pasamos como parametro el elemento
+        elem.innerHTML="texttttttt"//pasamos el elemento al html
+    }
+</script>
+
+
+</body>
+</html>

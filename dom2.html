@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos modernos </title>
+</head>
+<body>
+    <h2 class="ejemplo">Titulo 2</h2>
+    <p class="ejemplo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, veniam!</p>
+<button class="btn" onclick="agregarFondo()">Agregar fondo</button> 
+<script>
+function agregarFondo(){
+    document.querySelector(".ejemplo").style.backgroundColor="green"// selecciona una query, entra alos estilos le cambia el color al fondo
+    document.querySelectorAll(".btn")[0].innerHTML="Gracias!"
+    document.querySelectorAll("button")[0].innerHTML="Gracias!"//podemos seleccionar el nombre del boton, o si ponemos el codigo html trae todos los botones
+}
+</script>
+<h2 class='titulo'> queySelectorAll </h2>
+<h class='subtitulo'>Subtitulo</h>
+<p class="parrafo"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam voluptate illum at. Natus, quod. Voluptate ducimus ex enim neque iure?</p>
+
+<h2 class='titulo'> queySelectorAll </h2>
+<h class='subtitulo'>Subtitulo</h>
+<p class="parrafo"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam voluptate illum at. Natus, quod. Voluptate ducimus ex enim neque iure?</p>
+
+<button class="boton"onclick="pintar()">Pintar</button>
+<button class="boton"onclick="pintarAleatorio()">Pintar</button>
+
+
+
+<script>
+    function pintar(){
+        var x, y ,i;
+        x= document.querySelectorAll(".parrafo");//trae todas las query que sean parrafo
+ for (i=0; i<x.length;i++){
+    x[i].style.backgroundColor="rgb(200,100,100)";
+ }
+    }
+    function pintarAleatorio(){
+        var x, y, i, r, g , b;
+        
+        r= Math.floor(Math.random()*256);
+        g=Math.floor(Math.random()*256);
+        b=Math.floor(Math.random()*256);
+        x=document.querySelectorAll(".parrafo");//del documento traemem todo los que sean parrafo
+        for(i=o;i<x.length;i++){
+            x[i].style.backgroundColor=`rgb(${r},${g},${b})`;// el indice representa la cantidad de parrafos 
+        }
+    }
+</script>
+
+</body>
+</html>

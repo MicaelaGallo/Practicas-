@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const img = document.createElement("img")// creamos un elemento del tipo que yo le diga en los parentesis
+    img.scr="https://www.kionetworks.com/hubfs/ALCHEMYLABS/Google-IMAGEN-project.jpg"
+    img.alt="esti"
+    img.width="200"
+    
+    document.body.appendChild(img);
+    
+    </script>
+<button onclick="agregarBoton()">Agregar boton</button>
+ <button onclick="agregarTitulo()">Agregar titulo"</button>
+
+
+
+<script>
+    function agregarBoton(){
+        var btn=document.createElement("button");
+        btn.innerHTML="Click";
+        document.body.appendChild(btn);
+    }
+</script>
+
+</body>
+</html>
